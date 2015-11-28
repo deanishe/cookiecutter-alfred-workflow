@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>{{ cookiecutter.bundle_id }}</string>
+	<key>connections</key>
+	<dict/>
+	<key>createdby</key>
+	<string>{{ cookiecutter.full_name }}</string>
+	<key>description</key>
+	<string>{{ cookiecutter.short_description }}</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>{{ cookiecutter.workflow_name }}</string>
+	<key>objects</key>
+	<array/>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict/>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
