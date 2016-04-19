@@ -1,34 +1,26 @@
+#                         d88b
+#                         8`'8
+# .d8888b. .d8888b.       d8b        .d8888b. 88d888b. 88d888b. .d8888b.
+# 88'  `88 Y8ooooo.     d8P`8b       88'  `88 88'  `88 88'  `88 Y8ooooo.
+# 88.  .88       88     d8' `8bP     88.  .88 88.  .88 88.  .88       88
+# `88888P' `88888P'     `888P'`YP    `88888P8 88Y888P' 88Y888P' `88888P'
+#                                             88       88
+#                                             dP       dP                                                             dP       dP
+.DS_Store
+._*
+Icon
 
-.python-version
 
-*.py[cod]
+# Dropbox
+.dropbox.attr
 
-# Packages
-*.egg
-*.egg-info
-dist
-build
-eggs
-parts
-var
-sdist
-develop-eggs
-.installed.cfg
+#                dP oo   dP
+#                88      88
+# .d8888b. .d888b88 dP d8888P .d8888b. 88d888b. .d8888b.
+# 88ooood8 88'  `88 88   88   88'  `88 88'  `88 Y8ooooo.
+# 88.  ... 88.  .88 88   88   88.  .88 88             88
+# `88888P' `88888P8 dP   dP   `88888P' dP       `88888P'
 
-# Installer logs
-pip-log.txt
-
-# Unit test / coverage reports
-.coverage
-.tox
-
-# Translations
-#*.mo
-
-#Mr Developer
-.mr.developer.cfg
-
-# Mine own
 *.sublime-project
 *.sublime-workspace
 .idea
@@ -45,65 +37,55 @@ dist
 *.swo
 *.bak
 *~
-.DS_Store
-._*
 .sass-cache
-
-# Dropbox
-.dropbox.attr
-
-
-# Created by https://www.gitignore.io/api/sublimetext,vim,python
-
-### SublimeText ###
-# cache files for sublime text
 *.tmlanguage.cache
 *.tmPreferences.cache
 *.stTheme.cache
-
-# project files should be checked into the repository, unless a significant
-# proportion of contributors will probably not be using SublimeText
-# *.sublime-project
-
-# sftp configuration file
-sftp-config.json
-
-
-### Vim ###
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-*.un~
 Session.vim
 .netrwhist
-*~
 
 
-### Python ###
+#                     dP   dP
+#                     88   88
+# 88d888b. dP    dP d8888P 88d888b. .d8888b. 88d888b.
+# 88'  `88 88    88   88   88'  `88 88'  `88 88'  `88
+# 88.  .88 88.  .88   88   88    88 88.  .88 88    88
+# 88Y888P' `8888P88   dP   dP    dP `88888P' dP    dP
+# 88            .88
+# dP        d8888P
+
+# pyenv
+.python-version
+
+# Packages
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts
+var/
+sdist/
+develop-eggs
+.installed.cfg
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+
+# Compiled Python files
+*.py[cod]
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *$py.class
 
 # C extensions
 *.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-eggs/
-.eggs/
-sdist/
-*.egg-info/
-*.dist-info/
-.installed.cfg
-*.egg
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
 
 # Installer logs
 pip-log.txt
@@ -120,16 +102,8 @@ coverage.xml
 *,cover
 .hypothesis/
 
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
 *.log
+*.log.1
 
 # Sphinx documentation
 docs/_build/
-
-# PyBuilder
-target/
-

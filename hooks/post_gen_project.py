@@ -23,9 +23,24 @@ packages = [
     'docopt',
 ]
 
-cmd = ['/usr/bin/python', '-m', 'pip', 'install', '--target', 'src'] + packages
-
-print("Installing packages : {} ...".format(', '.join(packages)),
-      file=sys.stderr)
-
-subprocess.call(cmd)
+for comment, cmd in [
+    (
+        "Installing packages : {} ...".format(', '.join(packages)),
+        # ['/usr/bin/python', '-m', 'pip', 'install', '--target', 'src'] + packages
+        ['/usr/bin/python', 'hooks/get-pip.py', 'install', '--target', 'src'] + packages
+    ),
+    (
+        "Initialsing git repository ...",
+        ['git', 'init', '.']
+    ),
+    (
+        "Linking src/LICENCE.txt to root ...",
+        ['ln', '-s', 'src/LICENCE.txt', '.']
+    ),
+    (
+        "Dangling symlink from src/icon.png to root ...",
+        ['ln', '-s', 'src/icon.png', '.']
+    ),
+        ]:
+    print(comment, file=sys.stderr)
+    subprocess.call(cmd)

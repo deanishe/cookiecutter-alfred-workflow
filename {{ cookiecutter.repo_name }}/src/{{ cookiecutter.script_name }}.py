@@ -30,14 +30,30 @@ from workflow import Workflow
 
 log = None
 
+# Initial values for `settings.json`
+DEFAULT_SETTINGS = {}
+
+# Auto-update from GitHub releases
+UPDATE_SETTINGS = {
+    'github_slug': '{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
+}
+
+HELP_URL = 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/issues'
+
 
 def main(wf):
     """Run workflow script."""
     opts = docopt.docopt(__doc__, argv=wf.args, version=wf.version)
     query = opts.get('<query>')
+    
+    return 0
 
 
 if __name__ == '__main__':
-    wf = Workflow()
+    wf = Workflow(
+        default_settings=DEFAULT_SETTINGS,
+        update_settings=UPDATE_SETTINGS,
+        help_url=HELP_URL,
+    )
     log = wf.logger
     sys.exit(wf.run(main))
