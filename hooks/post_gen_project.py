@@ -7,14 +7,15 @@
 # Created on 2015-11-28
 #
 
-"""
-Called after project is generated.
+"""Called after project is generated.
 
 Install Alfred-Workflow and docopt.
 """
 
 from __future__ import unicode_literals, print_function
 
+# from cookiecutter.hooks import find_hooks
+# import os
 import subprocess
 import sys
 
@@ -23,11 +24,15 @@ packages = [
     'docopt',
 ]
 
+# pip = os.path.join(os.path.dirname(__file__), 'get-pip.py')
+# pip = os.path.abspath('hooks/get-pip.py')
+# pip = find_hooks().get('get-pip')
+
 for comment, cmd in [
     (
         "Installing packages : {} ...".format(', '.join(packages)),
-        # ['/usr/bin/python', '-m', 'pip', 'install', '--target', 'src'] + packages
-        ['/usr/bin/python', 'hooks/get-pip.py', 'install', '--target', 'src'] + packages
+        ['/usr/bin/python', '-m' 'pip', 'install',
+         '--target', 'src'] + packages
     ),
     (
         "Initialsing git repository ...",
@@ -43,4 +48,4 @@ for comment, cmd in [
     ),
         ]:
     print(comment, file=sys.stderr)
-    subprocess.call(cmd)
+    subprocess.check_call(cmd)

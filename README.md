@@ -10,6 +10,7 @@ The template puts everyting in a subdirectory of the current working directory, 
 
 The template assumes the following:
 
+- `pip` is installed where the system Python can find it (the template calls `/usr/bin/python -m pip install ...`)
 - The "root" directory is intended to be published as a GitHub repository and may contain a copy of the compiled `.alfredworkflow` file.
 - The actual workflow code is in the `src` subdirectory, *not* the root. Zipping the contents of `./src` will produce a viable `.alfredworkflow` file.
 - The workflow uses Python, the [Alfred-Workflow][aw] library and [docopt][docopt].
@@ -36,7 +37,7 @@ alfred-thingumy
 ├── .gitignore
 ├── README.md
 └── src
-    ├── Alfred_Workflow-1.13.dist-info
+    ├── Alfred_Workflow-1.20.dist-info
     │   ├── ...
     ├── LICENCE.txt
     ├── alfred_thingumy.py
@@ -46,12 +47,15 @@ alfred-thingumy
     ├── info.plist
     ├── version
     └── workflow
+        ├── Notify.tgz
         ├── __init__.py
         ├── background.py
+        ├── notify.py
         ├── update.py
         ├── version
         ├── web.py
         ├── workflow.py
+        ├── workflow3.py
 ```
 
 

@@ -7,8 +7,6 @@
 # Created on 2015-11-28
 #
 
-"""
-Called before project is generated.
-"""
+"""Called before project is generated."""
 
 from __future__ import unicode_literals
